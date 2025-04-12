@@ -1,3 +1,5 @@
+// Presentado por : Isabella Pinzon Caicedo y Juan Pablo Urbano
+                 
 package juego_batallas;
 
 public class Juego_Batallas {

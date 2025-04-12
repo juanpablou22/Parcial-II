@@ -2,9 +2,9 @@
 package juego_batallas;
 
 public abstract class Criatura {
-    private String nombre;
-    private int salud;
-    private int fuerza;
+    protected String nombre;
+    protected int salud;
+    protected int fuerza;
  
     public Criatura(String nombre, int salud, int fuerza) {
         this.nombre = nombre;

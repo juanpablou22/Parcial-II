@@ -8,12 +8,24 @@ public class Juego_Batallas {
         Arma garras = new Arma("Garras Afiladas", 6);
 
         Guerrero guerrero = new Guerrero("Conan", 100, 10, "Espada de Conan", espada);
-        Mago mago = new Mago("izzy", 80, 8, "Bola de Fuego", baston);
-        Dragon dragon = new Dragon("juanpa", 120, 12, "Escamas doradas", garras);
+        Mago mago = new Mago("Izzy", 80, 8, "Bola de Fuego", baston);
+        Dragon dragon = new Dragon("Juanpa", 120, 12, "Escamas doradas", garras);
 
+        System.out.println("----- PRIMERA BATALLA -----");
         simularBatalla(guerrero, mago);
-        System.out.println("\n----- NUEVA BATALLA -----\n");
-        simularBatalla(mago, dragon);
+
+        System.out.println("\n----- SEGUNDA BATALLA -----");
+        Criatura ganador1 = guerrero.estaViva() ? guerrero : mago;
+        simularBatalla(ganador1, dragon);
+
+        System.out.println("\n----- BATALLA FINAL -----");
+        if (guerrero.estaViva() && dragon.estaViva()) {
+            simularBatalla(guerrero, dragon);
+        } else if (mago.estaViva() && dragon.estaViva()) {
+            simularBatalla(mago, dragon);
+        } else {
+            System.out.println("No hay criaturas vivas");
+        }
     }
 
     public static void simularBatalla(Criatura criatura1, Criatura criatura2) {

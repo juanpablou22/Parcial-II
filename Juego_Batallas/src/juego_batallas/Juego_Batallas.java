@@ -8,8 +8,8 @@ public class Juego_Batallas {
         Arma garras = new Arma("Garras Afiladas", 6);
 
         Guerrero guerrero = new Guerrero("Conan", 100, 10, "Espada de Conan", espada);
-        Mago mago = new Mago("Gandalf", 80, 8, "Bola de Fuego", baston);
-        Dragon dragon = new Dragon("Smaug", 120, 12, "Escamas doradas", garras);
+        Mago mago = new Mago("izzy", 80, 8, "Bola de Fuego", baston);
+        Dragon dragon = new Dragon("juanpa", 120, 12, "Escamas doradas", garras);
 
         simularBatalla(guerrero, mago);
         System.out.println("\n----- NUEVA BATALLA -----\n");
